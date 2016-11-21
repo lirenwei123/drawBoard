@@ -13,6 +13,9 @@
 		FBF50CD81DE2F80C007370A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF50CD61DE2F80C007370A3 /* Main.storyboard */; };
 		FBF50CDA1DE2F80C007370A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF50CD91DE2F80C007370A3 /* Assets.xcassets */; };
 		FBF50CDD1DE2F80C007370A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF50CDB1DE2F80C007370A3 /* LaunchScreen.storyboard */; };
+		FBF50CE61DE30546007370A3 /* drawView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF50CE51DE30546007370A3 /* drawView.m */; };
+		FBF50CE91DE30F26007370A3 /* LRWBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF50CE81DE30F26007370A3 /* LRWBezierPath.m */; };
+		FBF50CEC1DE31664007370A3 /* UIImageView+drawImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF50CEB1DE31664007370A3 /* UIImageView+drawImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		FBF50CD91DE2F80C007370A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBF50CDC1DE2F80C007370A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBF50CDE1DE2F80C007370A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBF50CE41DE30546007370A3 /* drawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawView.h; sourceTree = "<group>"; };
+		FBF50CE51DE30546007370A3 /* drawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawView.m; sourceTree = "<group>"; };
+		FBF50CE71DE30F26007370A3 /* LRWBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRWBezierPath.h; sourceTree = "<group>"; };
+		FBF50CE81DE30F26007370A3 /* LRWBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRWBezierPath.m; sourceTree = "<group>"; };
+		FBF50CEA1DE31664007370A3 /* UIImageView+drawImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+drawImage.h"; sourceTree = "<group>"; };
+		FBF50CEB1DE31664007370A3 /* UIImageView+drawImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+drawImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +71,15 @@
 				FBF50CD11DE2F80C007370A3 /* AppDelegate.m */,
 				FBF50CD31DE2F80C007370A3 /* ViewController.h */,
 				FBF50CD41DE2F80C007370A3 /* ViewController.m */,
+				FBF50CE41DE30546007370A3 /* drawView.h */,
+				FBF50CE51DE30546007370A3 /* drawView.m */,
+				FBF50CE71DE30F26007370A3 /* LRWBezierPath.h */,
+				FBF50CE81DE30F26007370A3 /* LRWBezierPath.m */,
 				FBF50CD61DE2F80C007370A3 /* Main.storyboard */,
 				FBF50CD91DE2F80C007370A3 /* Assets.xcassets */,
 				FBF50CDB1DE2F80C007370A3 /* LaunchScreen.storyboard */,
+				FBF50CEA1DE31664007370A3 /* UIImageView+drawImage.h */,
+				FBF50CEB1DE31664007370A3 /* UIImageView+drawImage.m */,
 				FBF50CDE1DE2F80C007370A3 /* Info.plist */,
 				FBF50CCD1DE2F80C007370A3 /* Supporting Files */,
 			);
@@ -151,6 +166,9 @@
 			files = (
 				FBF50CD51DE2F80C007370A3 /* ViewController.m in Sources */,
 				FBF50CD21DE2F80C007370A3 /* AppDelegate.m in Sources */,
+				FBF50CEC1DE31664007370A3 /* UIImageView+drawImage.m in Sources */,
+				FBF50CE91DE30F26007370A3 /* LRWBezierPath.m in Sources */,
+				FBF50CE61DE30546007370A3 /* drawView.m in Sources */,
 				FBF50CCF1DE2F80C007370A3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

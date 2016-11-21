@@ -1,25 +1,139 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgQ-O6-cXf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Per-QH-ney"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="1lM-EX-gha">
+                                        <leftBarButtonItems>
+                                            <barButtonItem systemItem="trash" id="Jvr-M8-1Kw">
+                                                <connections>
+                                                    <action selector="deleAll:" destination="BYZ-38-t0r" id="lK9-cF-zBC"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="reply" id="290-lG-MN4">
+                                                <connections>
+                                                    <action selector="undo:" destination="BYZ-38-t0r" id="quz-FG-msF"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="stop" id="XDL-Z3-bet">
+                                                <connections>
+                                                    <action selector="crash:" destination="BYZ-38-t0r" id="bw4-ib-gLj"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="camera" id="g8v-qr-Kuu">
+                                                <connections>
+                                                    <action selector="selectPic:" destination="BYZ-38-t0r" id="Fil-9c-CT7"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ONq-XT-e8e">
+                                            <connections>
+                                                <action selector="saveDrawAsPic:" destination="BYZ-38-t0r" id="YtW-bf-Wdf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc9-YF-GBZ">
+                                <rect key="frame" x="0.0" y="406" width="320" height="74"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="gPT-o4-v7B">
+                                        <rect key="frame" x="-2" y="8" width="324" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="TMY-DG-Jsf"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="size:" destination="BYZ-38-t0r" eventType="valueChanged" id="ISH-tz-3Ff"/>
+                                        </connections>
+                                    </slider>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-el-eKs">
+                                        <rect key="frame" x="0.0" y="30" width="320" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="WpR-u4-zQT"/>
+                                        </constraints>
+                                        <items>
+                                            <barButtonItem systemItem="compose" id="bY4-ya-vaW">
+                                                <color key="tintColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="selectColor:" destination="BYZ-38-t0r" id="gcO-hk-hWB"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="compose" id="Qsi-LW-qGw">
+                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="selectColor:" destination="BYZ-38-t0r" id="Fwd-zV-pNG"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="compose" id="Gr2-4c-EuE">
+                                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="selectColor:" destination="BYZ-38-t0r" id="ABH-HX-8qM"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HSh-el-eKs" secondAttribute="trailing" id="CZR-C6-vjL"/>
+                                    <constraint firstItem="gPT-o4-v7B" firstAttribute="leading" secondItem="Dc9-YF-GBZ" secondAttribute="leading" id="S6n-xt-Co4"/>
+                                    <constraint firstItem="gPT-o4-v7B" firstAttribute="top" secondItem="Dc9-YF-GBZ" secondAttribute="top" constant="8" id="XaT-SS-dQK"/>
+                                    <constraint firstItem="HSh-el-eKs" firstAttribute="leading" secondItem="Dc9-YF-GBZ" secondAttribute="leading" id="d3a-bq-E4z"/>
+                                    <constraint firstAttribute="height" constant="74" id="nsQ-1O-BS9"/>
+                                    <constraint firstAttribute="trailing" secondItem="gPT-o4-v7B" secondAttribute="trailing" id="vX5-Ox-ulF"/>
+                                    <constraint firstAttribute="bottom" secondItem="HSh-el-eKs" secondAttribute="bottom" id="xea-Pz-q01"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7T-Fw-DKX" customClass="drawView">
+                                <rect key="frame" x="0.0" y="44" width="320" height="362"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J7T-Fw-DKX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1hJ-Fq-Eax"/>
+                            <constraint firstAttribute="trailing" secondItem="FgQ-O6-cXf" secondAttribute="trailing" id="6ve-7A-Jz2"/>
+                            <constraint firstAttribute="trailing" secondItem="Dc9-YF-GBZ" secondAttribute="trailing" id="KIn-Gw-vNd"/>
+                            <constraint firstItem="FgQ-O6-cXf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aCr-vP-onD"/>
+                            <constraint firstAttribute="trailing" secondItem="J7T-Fw-DKX" secondAttribute="trailing" id="b1k-7o-U2t"/>
+                            <constraint firstItem="FgQ-O6-cXf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d6i-18-v1P"/>
+                            <constraint firstItem="Dc9-YF-GBZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fOj-dZ-RCz"/>
+                            <constraint firstItem="J7T-Fw-DKX" firstAttribute="top" secondItem="FgQ-O6-cXf" secondAttribute="bottom" id="kGf-Iy-ZWu"/>
+                            <constraint firstItem="Dc9-YF-GBZ" firstAttribute="top" secondItem="J7T-Fw-DKX" secondAttribute="bottom" id="vHz-c4-Jaf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dc9-YF-GBZ" secondAttribute="bottom" id="xnf-fb-ykH"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="deawview" destination="J7T-Fw-DKX" id="Ypm-cs-oxR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="361" y="396"/>
         </scene>
     </scenes>
 </document>
